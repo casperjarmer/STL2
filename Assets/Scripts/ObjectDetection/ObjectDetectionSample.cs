@@ -5,7 +5,7 @@ using Niantic.Lightship.AR.ObjectDetection;
 
 public class ObjectDetectionSample : MonoBehaviour
 {
-    [SerializeField] private float _probabilityThreshold = 0.5f; // Filter på hvor præcis det skal være som detected
+    [SerializeField] private float _probabilityThreshold = 0.1f; // Filter på hvor præcis det skal være som detected
     [SerializeField] private ARObjectDetectionManager _objectDetectionManager;
     [SerializeField] private DrawRect _drawRect;
     [SerializeField] private bool detectAllCategories = false; //To switch between detecting all categories or only sculptures
@@ -44,7 +44,7 @@ public class ObjectDetectionSample : MonoBehaviour
     {
         string resultString = " ";
         float _confidence = 0;
-        string name = " ";
+        string _name = " ";
         var result = obj.Results;
 
         if (result == null)
@@ -61,27 +61,38 @@ public class ObjectDetectionSample : MonoBehaviour
 
             if (categorizations.Count <= 0)
             {
-                continue;
+                break;
             }
 
             categorizations.Sort((a, b) => b.Confidence.CompareTo(a.Confidence));
 
             var categoryToDisplay = categorizations[0];
-            
-            if (!detectAllCategories && categoryToDisplay.CategoryName != "sculpture")
+
+            if (!detectAllCategories)
             {
-                continue;
+                if (categorizations[0].CategoryName == "sculpture") // If the first category is a sculpture, we display that
+                {
+                    categoryToDisplay = categorizations[0];
+                }
+                else if (categorizations.Count > 1 && categorizations[1].CategoryName == "sculpture") // If the second category is a sculpture, we display that instead
+                {
+                    categoryToDisplay = categorizations[1];
+                }
+                else
+                {
+                    continue;
+                }
             }
 
             _confidence = categoryToDisplay.Confidence;
-            name = categoryToDisplay.CategoryName;
+            _name = categoryToDisplay.CategoryName;
 
             int h = Mathf.FloorToInt(_canvas.GetComponent<RectTransform>().rect.height);
             int w = Mathf.FloorToInt(_canvas.GetComponent<RectTransform>().rect.width);
 
             var rect = detection.CalculateRect(w, h, Screen.orientation);
 
-            resultString = $"Detected: {name} with confidence {_confidence:F2} \n";
+            resultString = $"Detected: {_name} with confidence {_confidence:F2} \n";
 
             _drawRect.CreateRectangle(rect, _colors[i % _colors.Length], resultString);
         }

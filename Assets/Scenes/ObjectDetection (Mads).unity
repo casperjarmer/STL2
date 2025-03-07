@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 385331358}
   - component: {fileID: 385331357}
   - component: {fileID: 385331356}
+  - component: {fileID: 385331361}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
   m_TagString: Untagged
@@ -219,6 +220,18 @@ Transform:
   - {fileID: 666377071}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &385331361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385331355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f060b6385b3f4ae29b8ac6f41026615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &453494486
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453494486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f403fecb297545b4bb9d996471c946bb, type: 3}
   m_Name: 
@@ -278,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8559163d33af146ae7e752590ad113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _probabilityThreshold: 0.5
+  _probabilityThreshold: 0.1
   _objectDetectionManager: {fileID: 1193407823}
   _drawRect: {fileID: 2085290939}
   detectAllCategories: 0
