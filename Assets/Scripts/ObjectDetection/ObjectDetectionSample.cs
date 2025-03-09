@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Niantic.Lightship.AR.ObjectDetection;
+using UnityEngine.UI;
+using TMPro;
 
 public class ObjectDetectionSample : MonoBehaviour
 {
@@ -18,9 +20,21 @@ public class ObjectDetectionSample : MonoBehaviour
         //Color.cyan, Color.white, Color.black, Color.gray, Color.grey
     };
 
+    [SerializeField]
+    [Tooltip("Slider GameObject to set probability threshold")]
+    private Slider _probabilityThresholdSlider;
+
+    [SerializeField]
+    [Tooltip("Text to display current slider value")]
+    private TMP_Text _probabilityThresholdText;
+
     private void Awake()
     {
         _canvas = Object.FindFirstObjectByType<Canvas>();
+
+        _probabilityThresholdSlider.value = _probabilityThreshold;
+        _probabilityThresholdSlider.onValueChanged.AddListener(OnThresholdChanged);
+        OnThresholdChanged(_probabilityThresholdSlider.value);
     }
 
     private void Start()
@@ -38,6 +52,10 @@ public class ObjectDetectionSample : MonoBehaviour
     {
         _objectDetectionManager.MetadataInitialized -= ObjectDetectionManagerOnMetadataInitialized;
         _objectDetectionManager.ObjectDetectionsUpdated -= ObjectDetectionManagerOnObjectDetectionUpdated;
+        if (_probabilityThresholdSlider)
+        {
+            _probabilityThresholdSlider.onValueChanged.RemoveListener(OnThresholdChanged);
+        }
     }
 
     private void ObjectDetectionManagerOnObjectDetectionUpdated(ARObjectDetectionsUpdatedEventArgs obj)
@@ -96,5 +114,10 @@ public class ObjectDetectionSample : MonoBehaviour
 
             _drawRect.CreateRectangle(rect, _colors[i % _colors.Length], resultString);
         }
+    }
+    private void OnThresholdChanged(float newThreshold)
+    {
+        _probabilityThreshold = newThreshold;
+        _probabilityThresholdText.text = $"Confidence: {newThreshold:F2}";
     }
 }
