@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ObjectDetection (Mads).unity
+    guid: 9565e2d833e7f2741ac18cd8cc384136
   m_configObjects:
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: c51c174342d90ab428fb85532a61cf45, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7734ded71ca36d8459f04fa4ced6a3ab, type: 2}
