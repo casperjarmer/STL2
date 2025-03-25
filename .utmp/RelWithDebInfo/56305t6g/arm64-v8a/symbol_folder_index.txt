@@ -1,1 +1,0 @@
-D:\Unity Projekter\STL 2\STL2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\56305t6g\obj\arm64-v8a
