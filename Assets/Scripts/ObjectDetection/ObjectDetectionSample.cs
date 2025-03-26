@@ -11,6 +11,8 @@ public class ObjectDetectionSample : MonoBehaviour
     [SerializeField] private ARObjectDetectionManager _objectDetectionManager;
     [SerializeField] private DrawRect _drawRect;
     [SerializeField] private bool detectAllCategories = false; //To switch between detecting all categories or only sculptures
+    public TMP_Text detectedObjectText;
+    private bool detectedObject = false;
 
     private Canvas _canvas;
 
@@ -111,6 +113,12 @@ public class ObjectDetectionSample : MonoBehaviour
             var rect = detection.CalculateRect(w, h, Screen.orientation);
 
             resultString = $"Detected: {_name} with confidence {_confidence:F2} \n";
+
+            if (detectedObject == false)
+            {
+                detectedObject = true;
+                detectedObjectText.text = $"Detected: {_name} with confidence {_confidence:F2} \n DNA Sculpture outside the south exit of Knoldene Ø";
+            }
 
             _drawRect.CreateRectangle(rect, _colors[i % _colors.Length], resultString);
         }
