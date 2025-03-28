@@ -117,7 +117,9 @@ public class ObjectDetectionSample : MonoBehaviour
             if (detectedObject == false)
             {
                 detectedObject = true;
-                detectedObjectText.text = $"Detected: {_name} with confidence {_confidence:F2} \n DNA Sculpture outside the south exit of Knoldene Ø";
+                //detectedObjectText.text = $"Detected: {_name} with confidence {_confidence:F2} \n DNA Sculpture outside the south exit of Gydehutten S";
+                detectedObjectText.text = $"DNA Sculpture outside the south exit of Gydehutten S \n Made by James Rogers - War historian";
+
             }
 
             _drawRect.CreateRectangle(rect, _colors[i % _colors.Length], resultString);

@@ -729,11 +729,11 @@ PrefabInstance:
       objectReference: {fileID: 1912974}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4, type: 3}
       propertyPath: _defaultLocation._latitude
-      value: 55.36657
+      value: 55.36679
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4, type: 3}
       propertyPath: _defaultLocation._longitude
-      value: 10.42889
+      value: 10.43009
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714347, guid: 652c0f1d2f3184a959f719dbc90057a4, type: 3}
       propertyPath: m_RootOrder
