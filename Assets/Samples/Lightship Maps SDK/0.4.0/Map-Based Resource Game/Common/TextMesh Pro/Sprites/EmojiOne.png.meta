@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 2580a6eae2d6f124eb05efb7ef7dd8c4
+=======
+guid: 992e506c06a4fdc46a937e2966ba5334
+>>>>>>> Stashed changes
 TextureImporter:
   fileIDToRecycleName:
     21300000: EmojiOne_0
