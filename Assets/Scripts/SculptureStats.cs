@@ -7,8 +7,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SculptureData", menuName = "Sculpture Stats", order = 1)]
 public class SculptureStats : ScriptableObject
 {
+    public bool isCollected = false;
     public string ID;
-
+    
     public string sculptureName;
 
     public string description;

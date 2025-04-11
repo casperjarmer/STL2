@@ -30,6 +30,8 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
         // man skal hive alle MarkerSpawner objekter ind i denne array i inspectoren
         public SculptureStatsSc[] sculptures = new SculptureStatsSc[1];
 
+        //public List<Vector2> sculptureLocations = new List<Vector2>();
+
         //        [SerializeField]
         //        private FloatingText.FloatingText _floatingTextPrefab;
         /*
@@ -103,6 +105,8 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
             for (int i = 0; i < sculptures.Length; i++)
             {
                 LatLng sculptureCoordinates = new LatLng(sculptures[i].stats.latitude, sculptures[i].stats.longitude);
+                //sculptureLocations.Add(new Vector2((float)sculptureCoordinates.Latitude,(float)sculptureCoordinates.Longitude));
+                
                 _markerSpawner.PlaceInstance(sculptureCoordinates);
                 Debug.Log("Loop " + sculptureCoordinates + i);
             }
