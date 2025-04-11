@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: b84e7b8b76d972842b947a3b745eb69b
+=======
+guid: 30fe2f3606bf5fa4db3dada43418b41b
+>>>>>>> Stashed changes
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:
