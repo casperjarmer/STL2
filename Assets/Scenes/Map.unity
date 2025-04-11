@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450605470540099836, guid: fa8d05b3803534a4dbdb1150fa69606c, type: 3}
       propertyPath: m_Name
-      value: MarkerSpawner
+      value: DNA1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -452,6 +452,7 @@ MonoBehaviour:
   sculptures:
   - {fileID: 1912977}
   - {fileID: 1641761087}
+  sculptureLocations: []
 --- !u!1001 &549113511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -850,7 +851,7 @@ GameObject:
   - component: {fileID: 1641761088}
   - component: {fileID: 1641761087}
   m_Layer: 0
-  m_Name: MarkerSpawner (1)
+  m_Name: DNA2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

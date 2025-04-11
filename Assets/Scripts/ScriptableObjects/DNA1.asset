@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA1
   m_EditorClassIdentifier: 
+  isCollected: 0
   ID: DNA1
   sculptureName: DNA sculpture 1
   description: This sculpture is cool
   latitude: 55.36680088665288
   longitude: 10.429245704987402
-  image: {fileID: 0}
+  image: {fileID: 2800000, guid: 5f6105d9bf350ef4c9c816fbc39895ce, type: 3}
