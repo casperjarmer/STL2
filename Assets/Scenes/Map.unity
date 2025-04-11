@@ -245,8 +245,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 549113512}
     - target: {fileID: 6614101382141779485, guid: 88c6861d76b4c49e18329bfbc54d44b5, type: 3}
+      propertyPath: _maximumPitchDegrees
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614101382141779485, guid: 88c6861d76b4c49e18329bfbc54d44b5, type: 3}
       propertyPath: _maximumZoomDistance
-      value: 400
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614101382141779485, guid: 88c6861d76b4c49e18329bfbc54d44b5, type: 3}
+      propertyPath: _gestureSettings._touchPinchZoomSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6614101382141779490, guid: 88c6861d76b4c49e18329bfbc54d44b5, type: 3}
       propertyPath: m_RootOrder
