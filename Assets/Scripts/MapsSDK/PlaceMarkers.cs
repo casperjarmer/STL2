@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Niantic.Lightship.Maps.Core.Coordinates;
 using Niantic.Lightship.Maps.MapLayers.Components;
 using UnityEngine;
@@ -25,6 +26,9 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
 
         [SerializeField]
         private LayerGameObjectPlacement _markerSpawner;
+
+        // man skal hive alle MarkerSpawner objekter ind i denne array i inspectoren
+        public SculptureStatsSc[] sculptures = new SculptureStatsSc[1];
 
         //        [SerializeField]
         //        private FloatingText.FloatingText _floatingTextPrefab;
@@ -96,6 +100,17 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
 
         private void PlaceMarkers()
         {
+            for (int i = 0; i < sculptures.Length; i++)
+            {
+                LatLng sculptureCoordinates = new LatLng(sculptures[i].stats.latitude, sculptures[i].stats.longitude);
+                _markerSpawner.PlaceInstance(sculptureCoordinates);
+                Debug.Log("Loop " + sculptureCoordinates + i);
+            }
+            /*foreach(GameObject child in buildingLayerGameObject.transform)
+            {
+                LatLng sculptureCoordinates = child.GetComponent<SculptureStatsSc>().coordinates;
+                _markerSpawner.PlaceInstance(sculptureCoordinates); 
+            }*/
             // Project the touch position onto the map and place a structure prefab there
             //var structureLatLng = ScreenPointToLatLong(touchPosition);
             //var statue1LatLng = new LatLng(55.39660748916102, 10.379028264689014); //Mads Hjem
@@ -105,10 +120,10 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
             var statue4LatLng = new LatLng(55.36676846408718, 10.428824572127436);
             var statue5LatLng = new LatLng(55.36645981441671, 10.428503174433596);
 
-            var cameraForward = _mapCamera.transform.forward;
-            var forward = new Vector3(cameraForward.x, 0f, cameraForward.z).normalized;
+            //var cameraForward = _mapCamera.transform.forward;
+            //var forward = new Vector3(cameraForward.x, 0f, cameraForward.z).normalized;
             //var rotation = Quaternion.LookRotation(forward);
-            _markerSpawner.PlaceInstance(statue1LatLng); //placing marker at statue1 position
+            //_markerSpawner.PlaceInstance(statue1LatLng); //placing marker at statue1 position
             //_markerSpawner.PlaceInstance(statue2LatLng); //placing marker at statue2 position
             //_markerSpawner.PlaceInstance(statue3LatLng); //placing marker at statue3 position
             //_markerSpawner.PlaceInstance(statue4LatLng); //placing marker at statue4 position
