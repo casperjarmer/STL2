@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA3
   m_EditorClassIdentifier: 
+  isCollected: 0
   ID: DNA3
   sculptureName: DNA streng nummer 3
   description: "den er ogs\xE5 cool"
-  latitude: 0
-  longitude: 0
+  latitude: 55.366224
+  longitude: 10.429895
   image: {fileID: 0}
