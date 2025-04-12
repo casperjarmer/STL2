@@ -22,18 +22,19 @@ public class StatueManager : MonoBehaviour
     // Private array to store each button's original sprite (the collected statue image).
     private Sprite[] originalButtonSprites;
 
+    // Constant placeholder string for the info text.
+    private const string InfoPlaceholderText = "Information unavailable. Collect this statue to discover its history.";
+
     private void Start()
     {
-        // Initialize the storage array.
-        if (/*statueButtons != null && statueButtons.Length > 0*/ true)
+        // Initialize the storage array for the original button images.
+        if (statueButtons != null && statueButtons.Length > 0)
         {
             originalButtonSprites = new Sprite[statueButtons.Length];
-            Debug.Log("Statue buttons length: " + statueButtons.Length);
 
-            // Loop through each button, assuming the button's child (e.g., index 0) holds the icon Image.
+            // Loop through each button, assuming the button's child (index 0) holds the icon Image.
             for (int i = 0; i < statueButtons.Length; i++)
             {
-                Debug.Log("Button ");
                 // Try to get the Image component from the first child.
                 if (statueButtons[i].transform.childCount > 0)
                 {
@@ -75,10 +76,19 @@ public class StatueManager : MonoBehaviour
         // Retrieve the corresponding statue Scriptable Object.
         SculptureStats selectedStatue = statueDataList[index];
 
-        // Update the info text with the statue's name and description.
-        infoText.text = string.Format("{0}\n\n{1}",
-                                      selectedStatue.sculptureName,
-                                      selectedStatue.description);
+        // Conditionally update the info text.
+        if (selectedStatue.isCollected)
+        {
+            // If collected, show the statue's name and description.
+            infoText.text = string.Format("{0}\n\n{1}",
+                                          selectedStatue.sculptureName,
+                                          selectedStatue.description);
+        }
+        else
+        {
+            // If not collected, show the placeholder information.
+            infoText.text = InfoPlaceholderText;
+        }
 
         // Update the big image display:
         // Show the collected image if isCollected is true; otherwise, show the placeholder.
@@ -94,7 +104,7 @@ public class StatueManager : MonoBehaviour
             }
             else
             {
-                // If no image is provided, fallback to placeholder.
+                // Fall back to the placeholder if the image is missing.
                 statueImage.sprite = placeholderSprite;
             }
         }
