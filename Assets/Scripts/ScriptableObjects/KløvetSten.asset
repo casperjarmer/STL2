@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
+  m_Name: "Kl\xF8vetSten"
+  m_EditorClassIdentifier: 
+  isCollected: 0
+  ID: "Kl\xF8vetSten"
+  sculptureName: "Kl\xF8vet Sten"
+  description: "\"Kl\xF8vet sten\". Af Frede Troelsens. Skulpturen der siden 1991
+    har st\xE5et ved krydset mellem Kirkeg\xE5rds All\xE9 og Sdr. Boulevard, og som
+    p\xE5 grund af sin form har f\xE5et skyld for at tiltr\xE6kke sig en del opm\xE6rksomhed,
+    er flyttet til SDU. Her st\xE5r den nu ved Institut for Idr\xE6t og Biomekanik
+    p\xE5 SDU."
+  latitude: 55.370354999999996
+  longitude: 10.428642
+  image: {fileID: 2800000, guid: b9fba2db93e24f74e8f7028a49d697b9, type: 3}

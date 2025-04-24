@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA2
   m_EditorClassIdentifier: 
+  isCollected: 0
   ID: DNA2
-  sculptureName: DNA sculpture 2
-  description: This sculpture is cool
-  latitude: 55.366743
-  longitude: 10.430424
-  image: {fileID: 0}
+  sculptureName: States of Minds 2
+  description: "Du har fundet en del af \"States of Minds\"-serien. Skulpturen symboliserer
+    en erkendelsesproces \u2013 som id\xE9er, der spirer i de studerendes og forskernes
+    hverdag.  "
+  latitude: 55.366651
+  longitude: 10.429545
+  image: {fileID: 2800000, guid: 28c4eedfd4f570243853c4ff29c7f5b8, type: 3}
+  audio: {fileID: 8300000, guid: e8ca97f7830d75540967a9de97b77c9a, type: 3}

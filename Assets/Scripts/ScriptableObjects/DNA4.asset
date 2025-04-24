@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
+  m_Name: DNA4
+  m_EditorClassIdentifier: 
+  isCollected: 0
+  ID: DNA4
+  sculptureName: States of Minds 4
+  description: "Du har fundet en del af \"States of Minds\"-serien.  Hver figur i
+    serien repr\xE6senterer et stadie i en mental rejse \u2013 ligesom du bev\xE6ger
+    dig fra en erkendelse til den n\xE6ste."
+  latitude: 55.366208
+  longitude: 10.42908
+  image: {fileID: 2800000, guid: deb6a24bd7c5e70488116be92d1ce125, type: 3}
+  audio: {fileID: 8300000, guid: 293327f7145409840b6002b8e4f568f8, type: 3}
