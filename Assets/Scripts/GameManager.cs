@@ -12,6 +12,8 @@ public class Gamemanager : MonoBehaviour
     
     public SculptureStats currentSculpture;
 
+    public GameObject objectSpawner;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -23,12 +25,12 @@ public class Gamemanager : MonoBehaviour
         {
             _instance = this;
         }
-        
+        objectSpawner = GameObject.Find("ObjectSpawner");
     }
 
     public void LoadObjectDetectionScene()
     {
-        SculptureStats[] sculptures = GetComponent<MapGameMapInteractions>().sculptures;
+        SculptureStats[] sculptures = objectSpawner.GetComponent<MapGameMapInteractions>().sculptures;
         GameObject player = GameObject.Find("Player");
         for (int i = 0; i < sculptures.Length; i++)
         {
@@ -45,8 +47,5 @@ public class Gamemanager : MonoBehaviour
             }
         }
     }
-    public void GoToMap()
-    {
-        SceneManager.LoadScene("Map");
-    }
+    
 }

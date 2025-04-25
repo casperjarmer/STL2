@@ -106,7 +106,7 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
             {
                 LatLng sculptureCoordinates = new LatLng(sculptures[i].latitude, sculptures[i].longitude);
                 //sculptureLocations.Add(new Vector2((float)sculptureCoordinates.Latitude,(float)sculptureCoordinates.Longitude));
-                
+                _markerSpawner.name = sculptures[i].sculptureName;
                 _markerSpawner.PlaceInstance(sculptureCoordinates);
                 Debug.Log("Loop " + sculptureCoordinates + i);
             }
