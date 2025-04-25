@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollected: 0
   ID: DNA1
-  sculptureName: DNA sculpture 1
-  description: This sculpture is cool
+  sculptureName: States of Minds 1
+  description: "Du har fundet en del af \"States of Minds\"-serien. Disse former
+    viser en t\xE6nkt plantev\xE6kst \u2013 som tanker i bev\xE6gelse. En visuel
+    fort\xE6lling om erkendelse, udvikling og v\xE6kst."
   latitude: 55.36680088665288
   longitude: 10.429245704987402
   image: {fileID: 2800000, guid: 5f6105d9bf350ef4c9c816fbc39895ce, type: 3}
+  audio: {fileID: 8300000, guid: 9bb569bcb450f544d9fa956646bf6030, type: 3}

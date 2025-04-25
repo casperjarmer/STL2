@@ -18,8 +18,10 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.CompareTag("Marker"))
         {
+            Gamemanager.Instance.LoadObjectDetectionScene();
             SceneManager.LoadScene("ObjectDetectionScene");
             Debug.Log("Player collided with marker");
         }

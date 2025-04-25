@@ -28,31 +28,33 @@ public class StatueManager : MonoBehaviour
     private void Start()
     {
         // Initialize the storage array for the original button images.
-        if (statueButtons != null && statueButtons.Length > 0)
+        if (statueButtons == null || statueButtons.Length <= 0)
         {
-            originalButtonSprites = new Sprite[statueButtons.Length];
+            return;
+        }
 
-            // Loop through each button, assuming the button's child (index 0) holds the icon Image.
-            for (int i = 0; i < statueButtons.Length; i++)
+        originalButtonSprites = new Sprite[statueButtons.Length];
+
+        // Loop through each button, assuming the button's child (index 0) holds the icon Image.
+        for (int i = 0; i < statueButtons.Length; i++)
+        {
+            // Try to get the Image component from the first child.
+            if (statueButtons[i].transform.childCount == 0)
             {
-                // Try to get the Image component from the first child.
-                if (statueButtons[i].transform.childCount > 0)
-                {
-                    Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
-                    if (childImage != null)
-                    {
-                        originalButtonSprites[i] = childImage.sprite;
-                    }
-                    else
-                    {
-                        Debug.LogWarning("Button " + i + " child does not have an Image component.");
-                    }
-                }
-                else
-                {
-                    Debug.LogWarning("Button " + i + " does not have a child GameObject for the icon.");
-                }
+                Debug.LogWarning("Button " + i + " does not have a child GameObject for the icon.");
+                continue;
             }
+
+            Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
+
+            if (childImage == null)
+            {
+                Debug.LogWarning("Button " + i + " child does not have an Image component.");
+                continue;
+                
+            }
+
+            originalButtonSprites[i] = childImage.sprite;
         }
 
         // Initially update all button images based on the current isCollected values.
@@ -80,9 +82,11 @@ public class StatueManager : MonoBehaviour
         if (selectedStatue.isCollected)
         {
             // If collected, show the statue's name and description.
-            infoText.text = string.Format("{0}\n\n{1}",
-                                          selectedStatue.sculptureName,
-                                          selectedStatue.description);
+            infoText.text = string.Format(
+                    "{0}\n\n{1}",
+                    selectedStatue.sculptureName,
+                    selectedStatue.description
+            );
         }
         else
         {
@@ -92,26 +96,28 @@ public class StatueManager : MonoBehaviour
 
         // Update the big image display:
         // Show the collected image if isCollected is true; otherwise, show the placeholder.
-        if (selectedStatue.isCollected)
-        {
-            if (selectedStatue.image != null)
-            {
-                // Convert Texture2D to Sprite.
-                Sprite statueSprite = Sprite.Create(selectedStatue.image,
-                                                      new Rect(0, 0, selectedStatue.image.width, selectedStatue.image.height),
-                                                      new Vector2(0.5f, 0.5f));
-                statueImage.sprite = statueSprite;
-            }
-            else
-            {
-                // Fall back to the placeholder if the image is missing.
-                statueImage.sprite = placeholderSprite;
-            }
-        }
-        else
+        if (!selectedStatue.isCollected)
         {
             statueImage.sprite = placeholderSprite;
+            return;
         }
+
+        if (selectedStatue.image == null)
+        {
+            // Fall back to the placeholder if the image is missing.
+            statueImage.sprite = placeholderSprite;
+            return;
+            
+        }
+
+        // Convert Texture2D to Sprite.
+        Sprite statueSprite = Sprite.Create(
+                selectedStatue.image,
+                new Rect(0, 0, selectedStatue.image.width, selectedStatue.image.height),
+                new Vector2(0.5f, 0.5f)
+        );
+
+        statueImage.sprite = statueSprite;
     }
 
     /// <summary>
@@ -126,15 +132,14 @@ public class StatueManager : MonoBehaviour
         for (int i = 0; i < statueDataList.Length && i < statueButtons.Length; i++)
         {
             // Retrieve the Image component from the button's child.
-            if (statueButtons[i].transform.childCount > 0)
-            {
-                Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
-                if (childImage != null)
-                {
-                    // Set to original sprite if collected; else, set to placeholder.
-                    childImage.sprite = statueDataList[i].isCollected ? originalButtonSprites[i] : placeholderSprite;
-                }
-            }
+            if (statueButtons[i].transform.childCount <= 0) return;
+
+            Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
+
+            if (childImage == null) return;
+
+            // Set to original sprite if collected; else, set to placeholder.
+            childImage.sprite = statueDataList[i].isCollected ? originalButtonSprites[i] : placeholderSprite;
         }
     }
 }

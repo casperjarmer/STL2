@@ -118,8 +118,8 @@ public class ObjectDetectionSample : MonoBehaviour
             {
                 detectedObject = true;
                 //detectedObjectText.text = $"Detected: {_name} with confidence {_confidence:F2} \n DNA Sculpture outside the south exit of Gydehutten S";
-                detectedObjectText.text = $"DNA Sculpture outside the south exit of Gydehutten S \n Made by James Rogers - War historian";
-
+                //detectedObjectText.text = $"DNA Sculpture outside the south exit of Gydehutten S \n Made by James Rogers - War historian";
+                detectedObjectText.text = Gamemanager.Instance.currentSculpture.description;
             }
 
             _drawRect.CreateRectangle(rect, _colors[i % _colors.Length], resultString);
