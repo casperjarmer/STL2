@@ -18,4 +18,5 @@ MonoBehaviour:
   description: "S\xF8ren Georg Jensen byggeris skulptur 1953 ved sdu odense"
   latitude: 55.369315
   longitude: 10.426765
-  image: {fileID: 2800000, guid: ced1580d9004a7a4e82c6c402cc98f89, type: 3}
+  image: {fileID: 21300000, guid: ced1580d9004a7a4e82c6c402cc98f89, type: 3}
+  audio: {fileID: 0}

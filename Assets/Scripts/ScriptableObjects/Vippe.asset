@@ -18,5 +18,5 @@ MonoBehaviour:
   description: 
   latitude: 55.368
   longitude: 10.426
-  image: {fileID: 2800000, guid: 75bc480a85de13440acdea343ef87e65, type: 3}
+  image: {fileID: 21300000, guid: 75bc480a85de13440acdea343ef87e65, type: 3}
   audio: {fileID: 0}

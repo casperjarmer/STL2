@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA5
   m_EditorClassIdentifier: 
-  isCollected: 0
+  isCollected: 1
   ID: DNA5
   sculptureName: States of Minds 5
   description: "Du har fundet en del af \"States of Minds\"-serien. De er t\xE6nkt
@@ -20,5 +20,5 @@ MonoBehaviour:
     de mentale processer, der former universitetet."
   latitude: 55.366278
   longitude: 10.430128
-  image: {fileID: 2800000, guid: 2291a7f3e05b1b9429f41445c77c2aa9, type: 3}
+  image: {fileID: 21300000, guid: deb6a24bd7c5e70488116be92d1ce125, type: 3}
   audio: {fileID: 8300000, guid: d9a6c3d9b5e3c3842a459bad2c2d7e75, type: 3}
