@@ -18,4 +18,4 @@ MonoBehaviour:
   description: "den er ogs\xE5 cool"
   latitude: 55.366224
   longitude: 10.429895
-  image: {fileID: 0}
+  image: {fileID: 2800000, guid: 01b774138bfafda43bbea74429ede0d1, type: 3}
