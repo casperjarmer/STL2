@@ -28,7 +28,7 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
         private LayerGameObjectPlacement _markerSpawner;
 
         // man skal hive alle MarkerSpawner objekter ind i denne array i inspectoren
-        public SculptureStatsSc[] sculptures = new SculptureStatsSc[1];
+        public SculptureStats[] sculptures = new SculptureStats[1];
 
         //public List<Vector2> sculptureLocations = new List<Vector2>();
 
@@ -104,7 +104,7 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
         {
             for (int i = 0; i < sculptures.Length; i++)
             {
-                LatLng sculptureCoordinates = new LatLng(sculptures[i].stats.latitude, sculptures[i].stats.longitude);
+                LatLng sculptureCoordinates = new LatLng(sculptures[i].latitude, sculptures[i].longitude);
                 //sculptureLocations.Add(new Vector2((float)sculptureCoordinates.Latitude,(float)sculptureCoordinates.Longitude));
                 
                 _markerSpawner.PlaceInstance(sculptureCoordinates);
