@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
+  m_Name: Demon Core
+  m_EditorClassIdentifier: 
+  isCollected: 0
+  ID: DemonCore
+  sculptureName: Demon Core
+  description: "Skulptur, der forestiller en af d\xE6monkernerne, ved picnicomr\xE5det
+    uden for TEK. D\xE6monkernerne var to plutoniumkerner udviklet under Manhattan-projektet,
+    som for\xE5rsagede d\xF8delige ulykker under eksperimenter p\xE5 grund af deres
+    ekstreme radioaktivitet og ustabile natur."
+  latitude: 55.367865
+  longitude: 10.430985
+  image: {fileID: 2800000, guid: cbb99a2409f62b148bf1bde76faa3451, type: 3}
+  audio: {fileID: 0}

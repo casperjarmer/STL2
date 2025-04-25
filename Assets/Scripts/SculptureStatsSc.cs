@@ -36,4 +36,14 @@ public class SculptureStatsSc : MonoBehaviour
     {
         
     }
+    
+    public void PlayAudio()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        if (audioSource != null && stats.audio != null)
+        {
+            audioSource.clip = stats.audio;
+            audioSource.Play();
+        }
+    }
 }

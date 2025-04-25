@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollected: 0
   ID: DNA3
-  sculptureName: DNA streng nummer 3
-  description: "den er ogs\xE5 cool"
-  latitude: 55.366224
-  longitude: 10.429895
+  sculptureName: States of Minds 3
+  description: "Du har fundet en del af \"States of Minds\"-serien (2020) af Ursula
+    Nistrup. Formerne peger mod en udvikling \u2013 ikke kun i naturen, men i sindet.
+    En metafor for intellektuel v\xE6kst."
+  latitude: 55.366792
+  longitude: 10.430571
   image: {fileID: 2800000, guid: 01b774138bfafda43bbea74429ede0d1, type: 3}
+  audio: {fileID: 8300000, guid: 746d832f4ff75e247bd335b9cb0d913d, type: 3}

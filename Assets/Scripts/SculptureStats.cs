@@ -16,7 +16,6 @@ public class SculptureStats : ScriptableObject
     public double latitude;
     public double longitude;
     public Texture2D image;
-
-    
+    public AudioClip audio;
 }
 
