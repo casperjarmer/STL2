@@ -132,15 +132,14 @@ public class StatueManager : MonoBehaviour
         for (int i = 0; i < statueDataList.Length && i < statueButtons.Length; i++)
         {
             // Retrieve the Image component from the button's child.
-            if (statueButtons[i].transform.childCount > 0)
-            {
-                Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
-                if (childImage != null)
-                {
-                    // Set to original sprite if collected; else, set to placeholder.
-                    childImage.sprite = statueDataList[i].isCollected ? originalButtonSprites[i] : placeholderSprite;
-                }
-            }
+            if (statueButtons[i].transform.childCount <= 0) return;
+
+            Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
+
+            if (childImage == null) return;
+
+            // Set to original sprite if collected; else, set to placeholder.
+            childImage.sprite = statueDataList[i].isCollected ? originalButtonSprites[i] : placeholderSprite;
         }
     }
 }
