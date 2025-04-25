@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Marker"))
         {
+            Gamemanager.Instance.LoadObjectDetectionScene();
             SceneManager.LoadScene("ObjectDetectionScene");
             Debug.Log("Player collided with marker");
         }

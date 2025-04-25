@@ -412,8 +412,9 @@ GameObject:
   m_Component:
   - component: {fileID: 441493797}
   - component: {fileID: 441493798}
+  - component: {fileID: 441493799}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,9 +451,20 @@ MonoBehaviour:
   _lightshipMapView: {fileID: 1453108699}
   _markerSpawner: {fileID: 1912975}
   sculptures:
-  - {fileID: 1912977}
-  - {fileID: 1641761087}
-  sculptureLocations: []
+  - {fileID: 11400000, guid: e8f87f406adfa0c4ca3656799d3949a4, type: 2}
+  - {fileID: 11400000, guid: 5f634dde93755864ea9e5aa20930e3f3, type: 2}
+--- !u!114 &441493799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441493796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2deb4a6b7b9477a40895be8160a0ed62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &549113511
 PrefabInstance:
   m_ObjectHideFlags: 0
