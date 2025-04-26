@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: Kubus
   m_EditorClassIdentifier: 
-  isCollected: 1
+  isCollected: 0
   ID: Kubus
   sculptureName: Kubus
   description: "\"Kubus\". J\xF8rn Larsen f. 1926. Cortenst\xE5l 1977. Sk\xE6nket
