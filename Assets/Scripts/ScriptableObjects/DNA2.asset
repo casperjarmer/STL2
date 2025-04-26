@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA2
   m_EditorClassIdentifier: 
-  isCollected: 0
+  isCollected: 1
   ID: DNA2
   sculptureName: States of Minds 2
   description: "Du har fundet en del af \"States of Minds\"-serien. Skulpturen symboliserer
