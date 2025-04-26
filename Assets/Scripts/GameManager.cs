@@ -12,6 +12,9 @@ public class Gamemanager : MonoBehaviour
     
     public SculptureStats currentSculpture;
 
+    public GameObject objectSpawner;
+    public SculptureStats[] sculptures;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -23,30 +26,30 @@ public class Gamemanager : MonoBehaviour
         {
             _instance = this;
         }
-        
+        SceneManager.sceneLoaded += FindObjectSpawner;
     }
-
-    public void LoadObjectDetectionScene()
+    private void FindObjectSpawner(Scene scene, LoadSceneMode mode)
     {
-        SculptureStats[] sculptures = GetComponent<MapGameMapInteractions>().sculptures;
-        GameObject player = GameObject.Find("Player");
-        for (int i = 0; i < sculptures.Length; i++)
+        if( SceneManager.GetActiveScene().name == "Map")
         {
-            if (i == 0)
-            {
-                currentSculpture = sculptures[i];
-                continue;
-            }
-            else if (Vector3.Distance(player.transform.position,new Vector3((float)sculptures[i].latitude, 0f, (float)sculptures[i].longitude)) <
-                Vector3.Distance(player.transform.position, new Vector3((float)sculptures[i-1].latitude, 0f, (float)sculptures[i-1].longitude)))
-            {
-                currentSculpture = sculptures[i];
-                continue;
-            }
+            objectSpawner = GameObject.Find("ObjectSpawner");
+            sculptures = objectSpawner.GetComponent<MapGameMapInteractions>().sculptures;
         }
     }
-    public void GoToMap()
+
+
+    public void LoadObjectDetectionScene(GameObject sculpture)
     {
-        SceneManager.LoadScene("Map");
+        
+        for (int i = 0; i < sculptures.Length; i++)
+        {
+            if (sculptures[i].sculptureName == sculpture.transform.parent.name)
+            {
+                currentSculpture = sculptures[i];
+
+            }
+        }
+        currentSculpture.isCollected = true;
     }
+    
 }

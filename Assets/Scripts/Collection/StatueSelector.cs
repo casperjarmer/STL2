@@ -1,20 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using Unity.VisualScripting;
 
 public class StatueManager : MonoBehaviour
 {
     // Array of Scriptable Objects containing statue data.
-    public SculptureStats[] statueDataList;
+    public SculptureStats[] sculptures;
 
     // Reference to the UI Text component for displaying the statue's name and description.
     public TMP_Text infoText;
 
     // Reference to the UI Image component for displaying a larger version of the statue image.
-    public Image statueImage;
+    public Image sculptureImage;
 
     // Placeholder sprite to use when a statue is not collected.
     public Sprite placeholderSprite;
+
+    public GameObject prefab;
+    SculptureStats selectedStatue;
 
     // Array of Button components, where each Button contains an Image as a child that represents the icon.
     public Button[] statueButtons;
@@ -27,8 +32,11 @@ public class StatueManager : MonoBehaviour
 
     private void Start()
     {
+        sculptures = Gamemanager.Instance.sculptures;
+        sculptureImage = GameObject.Find("Big Image").GetComponent<Image>();
+        
         // Initialize the storage array for the original button images.
-        if (statueButtons == null || statueButtons.Length <= 0)
+        /*if (statueButtons == null || statueButtons.Length <= 0)
         {
             return;
         }
@@ -56,27 +64,36 @@ public class StatueManager : MonoBehaviour
 
             originalButtonSprites[i] = childImage.sprite;
         }
-
+*/
         // Initially update all button images based on the current isCollected values.
         UpdateButtonImages();
     }
 
+
+
+    
     /// <summary>
     /// Called when a statue button is pressed.
     /// The Button's OnClick() event should pass the corresponding statue index.
     /// </summary>
     /// <param name="index">Index of the statue in the statueDataList array.</param>
-    public void OnStatueButtonPressed(int index)
+   
+    public void OnStatueButtonPressed(GameObject button)
     {
-        // Validate that the index is within bounds.
-        if (statueDataList == null || index < 0 || index >= statueDataList.Length)
-        {
-            Debug.LogError("Invalid statue index!");
-            return;
-        }
+        
 
+        
         // Retrieve the corresponding statue Scriptable Object.
-        SculptureStats selectedStatue = statueDataList[index];
+        for (int i = 0; i < sculptures.Length; i++)
+        {
+            if (sculptures[i].sculptureName == button.name)
+            {
+                selectedStatue = sculptures[i];
+                Debug.Log("The statue is "+selectedStatue.sculptureName);
+                break;
+            }
+            
+        }
 
         // Conditionally update the info text.
         if (selectedStatue.isCollected)
@@ -98,26 +115,20 @@ public class StatueManager : MonoBehaviour
         // Show the collected image if isCollected is true; otherwise, show the placeholder.
         if (!selectedStatue.isCollected)
         {
-            statueImage.sprite = placeholderSprite;
+            sculptureImage.sprite = placeholderSprite;
             return;
         }
 
         if (selectedStatue.image == null)
         {
             // Fall back to the placeholder if the image is missing.
-            statueImage.sprite = placeholderSprite;
+            sculptureImage.sprite = placeholderSprite;
             return;
             
         }
 
-        // Convert Texture2D to Sprite.
-        Sprite statueSprite = Sprite.Create(
-                selectedStatue.image,
-                new Rect(0, 0, selectedStatue.image.width, selectedStatue.image.height),
-                new Vector2(0.5f, 0.5f)
-        );
 
-        statueImage.sprite = statueSprite;
+        sculptureImage.sprite = selectedStatue.image;
     }
 
     /// <summary>
@@ -127,19 +138,22 @@ public class StatueManager : MonoBehaviour
     /// </summary>
     public void UpdateButtonImages()
     {
-        if (statueDataList == null || statueButtons == null) return;
-
-        for (int i = 0; i < statueDataList.Length && i < statueButtons.Length; i++)
+        GameObject content = GameObject.Find("SculpturesContent");
+        for (int i = 0; i < sculptures.Length; i++)
         {
-            // Retrieve the Image component from the button's child.
-            if (statueButtons[i].transform.childCount <= 0) return;
+            GameObject clone = Instantiate(prefab,content.transform);
+            clone.GetComponent<Button>().onClick.AddListener(delegate { OnStatueButtonPressed(clone); });    
+            clone.name = sculptures[i].sculptureName;
+            if (sculptures[i].isCollected)
+            {
+                clone.transform.GetChild(0).GetComponent<Image>().sprite = sculptures[i].image;
+                
 
-            Image childImage = statueButtons[i].transform.GetChild(0).GetComponent<Image>();
-
-            if (childImage == null) return;
-
-            // Set to original sprite if collected; else, set to placeholder.
-            childImage.sprite = statueDataList[i].isCollected ? originalButtonSprites[i] : placeholderSprite;
+            }
+            else
+            {
+                clone.transform.GetChild(0).GetComponent<Image>().sprite = placeholderSprite;
+            }
         }
     }
 }

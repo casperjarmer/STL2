@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: Kubus
   m_EditorClassIdentifier: 
-  isCollected: 0
+  isCollected: 1
   ID: Kubus
   sculptureName: Kubus
   description: "\"Kubus\". J\xF8rn Larsen f. 1926. Cortenst\xE5l 1977. Sk\xE6nket
     af Statens Kunstfond."
   latitude: 55.368462
   longitude: 10.428258
-  image: {fileID: 2800000, guid: c92076d46a34beb48bf27de2f794aa66, type: 3}
+  image: {fileID: 21300000, guid: c92076d46a34beb48bf27de2f794aa66, type: 3}
+  audio: {fileID: 0}
