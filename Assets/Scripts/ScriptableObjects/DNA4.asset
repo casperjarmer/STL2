@@ -15,10 +15,10 @@ MonoBehaviour:
   isCollected: 0
   ID: DNA4
   sculptureName: States of Minds 4
-  description: "Du har fundet en del af \"States of Minds\"-serien.  Hver figur i
-    serien repr\xE6senterer et stadie i en mental rejse \u2013 ligesom du bev\xE6ger
-    dig fra en erkendelse til den n\xE6ste."
+  description: "You\u2019ve discovered a piece from the States of Minds series (2020)
+    by Ursula Nistrup. Each figure in the series represents a stage in a mental journey
+    \u2013 much like moving from one realization to the next."
   latitude: 55.366208
   longitude: 10.42908
   image: {fileID: 21300000, guid: 2291a7f3e05b1b9429f41445c77c2aa9, type: 3}
-  audio: {fileID: 8300000, guid: 293327f7145409840b6002b8e4f568f8, type: 3}
+  audio: {fileID: 8300000, guid: 9a094af45bcd9b44ebc2cab7255874b1, type: 3}

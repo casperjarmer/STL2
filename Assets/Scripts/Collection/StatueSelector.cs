@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 using System;
 using Unity.VisualScripting;
@@ -26,6 +27,7 @@ public class StatueManager : MonoBehaviour
 
     // Private array to store each button's original sprite (the collected statue image).
     private Sprite[] originalButtonSprites;
+    private AudioSource AudioSource;
 
     // Constant placeholder string for the info text.
     private const string InfoPlaceholderText = "Information unavailable. Collect this statue to discover its history.";
@@ -35,6 +37,14 @@ public class StatueManager : MonoBehaviour
         sculptures = Gamemanager.Instance.sculptures;
         sculptureImage = GameObject.Find("Big Image").GetComponent<Image>();
         
+
+        AudioSource = GetComponent<AudioSource>();
+        if (AudioSource == null)
+        {
+            AudioSource = gameObject.AddComponent<AudioSource>();
+            AudioSource.playOnAwake = false;
+        }
+
         // Initialize the storage array for the original button images.
         /*if (statueButtons == null || statueButtons.Length <= 0)
         {
@@ -79,16 +89,14 @@ public class StatueManager : MonoBehaviour
     /// <param name="index">Index of the statue in the statueDataList array.</param>
    
     public void OnStatueButtonPressed(GameObject button)
-    {
-        
-
-        
+    {      
         // Retrieve the corresponding statue Scriptable Object.
         for (int i = 0; i < sculptures.Length; i++)
         {
             if (sculptures[i].sculptureName == button.name)
             {
                 selectedStatue = sculptures[i];
+                Gamemanager.Instance.currentSculpture = selectedStatue; 
                 Debug.Log("The statue is "+selectedStatue.sculptureName);
                 break;
             }
@@ -130,6 +138,16 @@ public class StatueManager : MonoBehaviour
 
         sculptureImage.sprite = selectedStatue.image;
     }
+    
+    //play the audio of the selected statue
+    public void AudioButton()
+    {
+        if (selectedStatue != null && selectedStatue.isCollected && selectedStatue.audio != null)
+        {
+            AudioSource.clip = selectedStatue.audio;
+            AudioSource.Play();       
+        }
+    }
 
     /// <summary>
     /// Updates the image on each button based on whether the corresponding statue is collected.
@@ -142,7 +160,7 @@ public class StatueManager : MonoBehaviour
         for (int i = 0; i < sculptures.Length; i++)
         {
             GameObject clone = Instantiate(prefab,content.transform);
-            clone.GetComponent<Button>().onClick.AddListener(delegate { OnStatueButtonPressed(clone); });    
+            clone.GetComponent<Button>().onClick.AddListener(delegate { OnStatueButtonPressed(clone.gameObject); });    
             clone.name = sculptures[i].sculptureName;
             if (sculptures[i].isCollected)
             {

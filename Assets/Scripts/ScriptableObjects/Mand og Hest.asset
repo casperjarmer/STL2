@@ -15,8 +15,8 @@ MonoBehaviour:
   isCollected: 0
   ID: MandOgHest
   sculptureName: Ung mand med en hest
-  description: Skulptur "Ung mand med en hest". Agnete Madsen 1973
+  description: Sculpture "Young Man with a Horse", by Agnete Madsen, 1973.
   latitude: 55.368095999999994
   longitude: 10.424569
   image: {fileID: 21300000, guid: b17953ea83fd6b14bae73e106c39e409, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 537a4390ca23ec145a41b5c074336e0e, type: 3}

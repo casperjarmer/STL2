@@ -15,10 +15,10 @@ MonoBehaviour:
   isCollected: 0
   ID: DNA1
   sculptureName: States of Minds 1
-  description: "Du har fundet en del af \"States of Minds\"-serien. Disse former
-    viser en t\xE6nkt plantev\xE6kst \u2013 som tanker i bev\xE6gelse. En visuel
-    fort\xE6lling om erkendelse, udvikling og v\xE6kst."
+  description: "You\u2019ve discovered a piece from the States of Minds series (2020)
+    by Ursula Nistrup. These forms represent an imagined plant growth \u2013 like
+    thoughts in motion. A visual narrative of insight, development, and growth."
   latitude: 55.36680088665288
   longitude: 10.429245704987402
   image: {fileID: 21300000, guid: 5f6105d9bf350ef4c9c816fbc39895ce, type: 3}
-  audio: {fileID: 8300000, guid: 9bb569bcb450f544d9fa956646bf6030, type: 3}
+  audio: {fileID: 8300000, guid: 85af63bbb381ba24da2f82465ec1ce08, type: 3}

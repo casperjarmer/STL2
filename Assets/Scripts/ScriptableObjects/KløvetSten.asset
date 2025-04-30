@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: "Kl\xF8vetSten"
   m_EditorClassIdentifier: 
-  isCollected: 0
+  isCollected: 1
   ID: "Kl\xF8vetSten"
   sculptureName: "Kl\xF8vet Sten"
-  description: "\"Kl\xF8vet sten\". Af Frede Troelsens. Skulpturen der siden 1991
-    har st\xE5et ved krydset mellem Kirkeg\xE5rds All\xE9 og Sdr. Boulevard, og som
-    p\xE5 grund af sin form har f\xE5et skyld for at tiltr\xE6kke sig en del opm\xE6rksomhed,
-    er flyttet til SDU. Her st\xE5r den nu ved Institut for Idr\xE6t og Biomekanik
-    p\xE5 SDU."
+  description: "The sculpture \"Kl\xF8vet Sten\", which since 1991 stood at the intersection
+    of Kirkeg\xE5rds All\xE9 and Sdr. Boulevard \u2013 and which, due to its shape,
+    has drawn considerable attention \u2013 has now been relocated to SDU. It currently
+    stands by the Department of Sports Science and Biomechanics at the University
+    of Southern Denmark."
   latitude: 55.370354999999996
   longitude: 10.428642
   image: {fileID: 21300000, guid: b9fba2db93e24f74e8f7028a49d697b9, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: b37135ca33cb165449eb3935211ceaa2, type: 3}

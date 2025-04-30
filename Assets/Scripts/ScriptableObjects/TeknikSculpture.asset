@@ -15,8 +15,8 @@ MonoBehaviour:
   isCollected: 0
   ID: Teknik
   sculptureName: TeknikSculpture
-  description: "S\xF8ren Georg Jensen byggeris skulptur 1953 ved sdu odense"
+  description: "S\xF8ren Georg Jensen's sculpture \"Byggeris\" (1953) at SDU Odense."
   latitude: 55.369315
   longitude: 10.426765
   image: {fileID: 21300000, guid: ced1580d9004a7a4e82c6c402cc98f89, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: aad1c2db0bcfad84b85182faa0715a4e, type: 3}
