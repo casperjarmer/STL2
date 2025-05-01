@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
-  m_Name: Kubus
+  m_Name: I otte dele
   m_EditorClassIdentifier: 
   isCollected: 0
-  ID: Kubus
-  sculptureName: Kubus
-  description: "\"Kubus\". J\xF8rn Larsen, b. 1926. Corten steel, 1977. Donated by
-    the Danish Arts Foundation."
-  latitude: 55.368462
-  longitude: 10.428258
-  image: {fileID: 21300000, guid: c92076d46a34beb48bf27de2f794aa66, type: 3}
-  audio: {fileID: 8300000, guid: a79abe0cdad1dda47801e9040726fcff, type: 3}
+  ID: I otte dele
+  sculptureName: I Otte Dele
+  description: "\"I Otte Dele\" (2001), sculpture by Peter Bonn\xE9n"
+  latitude: 55.369
+  longitude: 10.43
+  image: {fileID: 21300000, guid: 2baf9cf35ddc53d4682fc282b60c61ea, type: 3}
+  audio: {fileID: 8300000, guid: 25adb876cc74da64794f0398c6e729dc, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA5
   m_EditorClassIdentifier: 
-  isCollected: 1
+  isCollected: 0
   ID: DNA5
   sculptureName: States of Minds 5
   description: "You\u2019ve discovered a piece from the States of Minds series (2020)
