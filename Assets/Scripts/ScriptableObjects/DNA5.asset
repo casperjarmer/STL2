@@ -18,7 +18,7 @@ MonoBehaviour:
   description: "You\u2019ve discovered a piece from the States of Minds series (2020)
     by Ursula Nistrup. These works are intended as a bridge between the built and
     the natural \u2013 a way to visualize the mental processes that shape the university."
-  latitude: 55.366278
-  longitude: 10.430128
+  latitude: 55.3662445
+  longitude: 10.4298167
   image: {fileID: 21300000, guid: deb6a24bd7c5e70488116be92d1ce125, type: 3}
   audio: {fileID: 8300000, guid: fffe6c2d16c9fa645afeac0f474e73c1, type: 3}

@@ -108,7 +108,14 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
                 //sculptureLocations.Add(new Vector2((float)sculptureCoordinates.Latitude,(float)sculptureCoordinates.Longitude));
                 
                 _markerSpawner.PlaceInstance(sculptureCoordinates);
-                GameObject.Find("Marker").name = sculptures[i].sculptureName;
+                GameObject marker = GameObject.Find("Marker");
+                marker.name = sculptures[i].sculptureName;
+                if(sculptures[i].isCollected)
+                {
+                    marker.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.green;
+                    marker.transform.GetChild(1).GetComponent<Renderer>().material.color = Color.green;
+                }
+
             }
             /*foreach(GameObject child in buildingLayerGameObject.transform)
             {
