@@ -15,11 +15,11 @@ MonoBehaviour:
   isCollected: 0
   ID: DemonCore
   sculptureName: Demon Core
-  description: "Skulptur, der forestiller en af d\xE6monkernerne, ved picnicomr\xE5det
-    uden for TEK. D\xE6monkernerne var to plutoniumkerner udviklet under Manhattan-projektet,
-    som for\xE5rsagede d\xF8delige ulykker under eksperimenter p\xE5 grund af deres
-    ekstreme radioaktivitet og ustabile natur."
+  description: Sculpture depicting the Demon Core, located near the picnic area outside
+    TEK. The Demon Core was a plutonium core developed during the Manhattan Project,
+    which caused two fatal accidents during experiments due to its extreme radioactivity
+    and unstable nature.
   latitude: 55.367865
   longitude: 10.430985
   image: {fileID: 21300000, guid: cbb99a2409f62b148bf1bde76faa3451, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 82e786b7c2422b64788e0ea42973eccf, type: 3}

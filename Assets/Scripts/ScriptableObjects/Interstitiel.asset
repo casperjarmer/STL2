@@ -15,9 +15,9 @@ MonoBehaviour:
   isCollected: 0
   ID: Interstitiel
   sculptureName: Interstitiel
-  description: "Karakteristiske s\xF8jle \u2019Interstitiel\u2019 skabt af kunstneren
-    J\xF8rn Larsen ved Hovedindgangen til Syddansk Universitet i Odense"
+  description: "The distinctive column Interstitiel, created by artist J\xF8rn Larsen,
+    stands at the main entrance of the University of Southern Denmark in Odense."
   latitude: 55.370982
   longitude: 10.428329
   image: {fileID: 21300000, guid: 6c5a7b3ffb13d454dbbb870601e33a51, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 534787fd8d0228f4385855efc26b6e82, type: 3}

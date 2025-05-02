@@ -15,9 +15,9 @@ MonoBehaviour:
   isCollected: 0
   ID: Kubus
   sculptureName: Kubus
-  description: "\"Kubus\". J\xF8rn Larsen f. 1926. Cortenst\xE5l 1977. Sk\xE6nket
-    af Statens Kunstfond."
+  description: "\"Kubus\". J\xF8rn Larsen, b. 1926. Corten steel, 1977. Donated by
+    the Danish Arts Foundation."
   latitude: 55.368462
   longitude: 10.428258
   image: {fileID: 21300000, guid: c92076d46a34beb48bf27de2f794aa66, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: a79abe0cdad1dda47801e9040726fcff, type: 3}

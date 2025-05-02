@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
-  m_Name: TeknikSculpture
+  m_Name: I otte dele
   m_EditorClassIdentifier: 
   isCollected: 0
-  ID: Teknik
-  sculptureName: TeknikSculpture
-  description: "S\xF8ren Georg Jensen's sculpture \"Byggeris\" (1953) at SDU Odense."
-  latitude: 55.369315
-  longitude: 10.426765
-  image: {fileID: 21300000, guid: ced1580d9004a7a4e82c6c402cc98f89, type: 3}
-  audio: {fileID: 8300000, guid: aad1c2db0bcfad84b85182faa0715a4e, type: 3}
+  ID: I otte dele
+  sculptureName: I Otte Dele
+  description: "\"I Otte Dele\" (2001), sculpture by Peter Bonn\xE9n"
+  latitude: 55.369
+  longitude: 10.43
+  image: {fileID: 21300000, guid: 2baf9cf35ddc53d4682fc282b60c61ea, type: 3}
+  audio: {fileID: 8300000, guid: 25adb876cc74da64794f0398c6e729dc, type: 3}

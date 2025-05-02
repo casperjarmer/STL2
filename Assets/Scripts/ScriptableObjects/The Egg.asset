@@ -15,9 +15,9 @@ MonoBehaviour:
   isCollected: 0
   ID: Egg
   sculptureName: The Egg
-  description: "\"\xC6gget\". Peter Tybjerg.  \xC6gget best\xE5r af 2390 kakler,
-    der har hvert sit symbol, hentet fra alverdens kulturer og lande."
+  description: Sculpture by Peter Tybjerg. The Egg is composed of 2,390 tiles, each
+    featuring a unique symbol drawn from cultures and countries around the world
   latitude: 55.36969
   longitude: 10.425552
   image: {fileID: 21300000, guid: 8d9a176211cd33d42af0df731fdcae6b, type: 3}
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: d02fa06ab993efe419c073c9d8f042f9, type: 3}
