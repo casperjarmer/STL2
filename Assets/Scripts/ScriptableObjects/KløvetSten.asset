@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: "Kl\xF8vetSten"
   m_EditorClassIdentifier: 
-  isCollected: 1
+  isCollected: 0
   ID: "Kl\xF8vetSten"
   sculptureName: "Kl\xF8vet Sten"
   description: "The sculpture \"Kl\xF8vet Sten\", which since 1991 stood at the intersection

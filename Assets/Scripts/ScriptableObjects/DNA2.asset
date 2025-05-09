@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5eb86819af41348bacb24d9287b906, type: 3}
   m_Name: DNA2
   m_EditorClassIdentifier: 
-  isCollected: 1
+  isCollected: 0
   ID: DNA2
   sculptureName: States of Minds 2
   description: "You\u2019ve discovered a piece from the States of Minds series (2020)
     by Ursula Nistrup. The sculpture symbolizes a process of realization \u2013 like
     ideas taking root and growing in the everyday lives of students and researchers."
-  latitude: 55.366651
-  longitude: 10.429545
+  latitude: 55.3666891
+  longitude: 10.4297185
   image: {fileID: 21300000, guid: 28c4eedfd4f570243853c4ff29c7f5b8, type: 3}
   audio: {fileID: 8300000, guid: 7acf3747bf4e75649b2d2c656e843299, type: 3}

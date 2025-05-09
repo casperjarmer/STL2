@@ -18,7 +18,7 @@ MonoBehaviour:
   description: "You\u2019ve discovered a piece from the States of Minds series (2020)
     by Ursula Nistrup. The forms suggest a sense of evolution \u2013 not only in
     nature, but in the mind. A metaphor for intellectual growth."
-  latitude: 55.366792
-  longitude: 10.430571
+  latitude: 55.3667659
+  longitude: 10.4304121
   image: {fileID: 21300000, guid: 01b774138bfafda43bbea74429ede0d1, type: 3}
   audio: {fileID: 8300000, guid: bca04f61a2d84a9499a05f1915f1d74a, type: 3}
