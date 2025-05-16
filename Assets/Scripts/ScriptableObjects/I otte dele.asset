@@ -20,3 +20,4 @@ MonoBehaviour:
   longitude: 10.43
   image: {fileID: 21300000, guid: 2baf9cf35ddc53d4682fc282b60c61ea, type: 3}
   audio: {fileID: 8300000, guid: 25adb876cc74da64794f0398c6e729dc, type: 3}
+  sculpturePrefab: {fileID: 0}

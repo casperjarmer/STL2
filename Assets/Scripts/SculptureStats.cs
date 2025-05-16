@@ -17,5 +17,6 @@ public class SculptureStats : ScriptableObject
     public double longitude;
     public Sprite image;
     public AudioClip audio;
+    public GameObject sculpturePrefab;
 }
 
