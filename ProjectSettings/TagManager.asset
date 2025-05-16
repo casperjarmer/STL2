@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Marker
   - Audio
+  - Collected
   layers:
   - Default
   - TransparentFX

@@ -77,6 +77,7 @@ namespace Niantic.Lightship.Maps.Samples.GameSample
                         sculpture.transform.localScale = Vector3.one*100;
                         Destroy(marker.transform.GetChild(1).gameObject);
                         marker.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.green;
+                        marker.transform.GetChild(0).tag = "Collected";
 
                     }
                     else { 
